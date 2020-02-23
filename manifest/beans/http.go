@@ -6,6 +6,7 @@ import (
     "time"
 )
 
+// http 依赖注入配置
 func HttpBeans() []bean.BeanDefinition {
     return []bean.BeanDefinition{
         {
