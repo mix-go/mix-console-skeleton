@@ -10,20 +10,20 @@ import (
 func Foobar() []console.CommandDefinition {
     return []console.CommandDefinition{
         {
-            Name:        "foo",
-            Reflect:     bean.NewReflect(commands.FooCommand{}),
-            Description: "foo desc",
+            Name:  "foo",
+            Usage: "foo desc",
             Options: []console.CommandOption{
                 {
-                    Names:       []string{"n", "name"},
-                    Description: "your name",
+                    Names: []string{"n", "name"},
+                    Usage: "your name",
                 },
             },
+            Reflect: bean.NewReflect(commands.FooCommand{}),
         },
         {
-            Name:        "bar",
-            Reflect:     bean.NewReflect(commands.BarCommand{}),
-            Description: "",
+            Name:    "bar",
+            Usage:   "",
+            Reflect: bean.NewReflect(commands.BarCommand{}),
         },
     }
 }

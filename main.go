@@ -5,8 +5,11 @@ import (
     "mix/src/console"
 )
 
+var (
+    App = console.NewApplication(manifest.Manifest())
+)
+
 // 主函数
 func main() {
-    app := console.NewApplication(manifest.Manifest())
-    app.Run()
+    App.Run()
 }
