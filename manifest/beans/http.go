@@ -1,15 +1,18 @@
 package beans
 
 import (
-    "mix/src/bean"
+    "github.com/mix-go/bean"
     "net/http"
     "time"
 )
 
-// http 依赖注入配置
-func Http() []bean.BeanDefinition {
-    return []bean.BeanDefinition{
-        {
+var (
+    Beans []bean.BeanDefinition
+)
+
+func init() {
+    Beans = append(Beans,
+        bean.BeanDefinition{
             Name:    "httpclient",
             Scope:   bean.SINGLETON,
             Reflect: bean.NewReflect(http.Client{}),
@@ -17,5 +20,5 @@ func Http() []bean.BeanDefinition {
                 "Timeout": time.Duration(time.Second * 3),
             },
         },
-    }
+    )
 }

@@ -1,15 +1,10 @@
 package main
 
 import (
+    "github.com/mix-go/console"
     "mix-skeleton/manifest"
-    "mix/src/console"
 )
 
-var (
-    App = console.NewApplication(manifest.Manifest())
-)
-
-// 主函数
 func main() {
-    App.Run()
+    console.NewApplication(manifest.ApplicationDefinition).Run()
 }

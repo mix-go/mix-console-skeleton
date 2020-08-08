@@ -1,29 +1,31 @@
 package commands
 
 import (
+    "github.com/mix-go/bean"
+    "github.com/mix-go/console"
     "mix-skeleton/app/console/commands"
-    "mix/src/bean"
-    "mix/src/console"
 )
 
-// foo bar
-func Foobar() []console.CommandDefinition {
-    return []console.CommandDefinition{
-        {
+var (
+    Commands []console.CommandDefinition
+)
+
+func init() {
+    Commands = append(Commands,
+        console.CommandDefinition{
             Name:  "foo",
             Usage: "foo desc",
-            Options: []console.CommandOption{
+            Options: []console.OptionDefinition{
                 {
                     Names: []string{"n", "name"},
                     Usage: "your name",
                 },
             },
             Reflect: bean.NewReflect(commands.FooCommand{}),
-        },
-        {
+        }, console.CommandDefinition{
             Name:    "bar",
-            Usage:   "",
+            Usage:   "bar desc",
             Reflect: bean.NewReflect(commands.BarCommand{}),
         },
-    }
+    )
 }
