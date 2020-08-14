@@ -1,9 +1,9 @@
 package commands
 
 import (
+    "console/commands"
     "github.com/mix-go/bean"
     "github.com/mix-go/console"
-    "mix-skeleton/console/commands"
 )
 
 var (
@@ -14,15 +14,19 @@ func init() {
     Commands = append(Commands,
         console.CommandDefinition{
             Name:  "hello",
-            Usage: "Echo demo",
+            Usage: "\tEcho demo",
             Options: []console.OptionDefinition{
                 {
                     Names: []string{"n", "name"},
-                    Usage: "your name",
+                    Usage: "Your name",
                 },
                 {
                     Names: []string{"say"},
-                    Usage: "Say ...",
+                    Usage: "\tSay ...",
+                },
+                {
+                    Names: []string{"d", "daemon"},
+                    Usage: "Run in the background",
                 },
             },
             Reflect: bean.NewReflect(commands.HelloCommand{}),

@@ -1,10 +1,10 @@
-package console
+package main
 
 import (
-    "github.com/mix-go/console"
-    "mix-skeleton/manifest"
+    "console/manifest"
+    console2 "github.com/mix-go/console"
 )
 
 func main() {
-    console.NewApplication(manifest.ApplicationDefinition, "eventDispatcher", "error").Run()
+    console2.NewApplication(manifest.ApplicationDefinition, "eventDispatcher", "error").Run()
 }
