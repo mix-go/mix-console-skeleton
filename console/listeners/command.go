@@ -17,7 +17,11 @@ func (t *CommandListener) Events() []event.Event {
 }
 
 func (t *CommandListener) Process(e event.Event) {
-    if flag.BoolMatch(false, "d") {
-        process.Daemon()
+    switch e.(type) {
+    case *event2.CommandBeforeExecuteEvent:
+        if flag.BoolMatch([]string{"d", "daemon"}, false) {
+            process.Daemon()
+        }
+        break
     }
 }

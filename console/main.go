@@ -1,4 +1,4 @@
-package main
+package console
 
 import (
     "github.com/mix-go/console"
