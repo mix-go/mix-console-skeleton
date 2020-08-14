@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-    console.NewApplication(manifest.ApplicationDefinition).Run()
+    console.NewApplication(manifest.ApplicationDefinition, "eventDispatcher", "error").Run()
 }

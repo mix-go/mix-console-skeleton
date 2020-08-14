@@ -3,7 +3,7 @@ package commands
 import (
     "github.com/mix-go/bean"
     "github.com/mix-go/console"
-    "mix-skeleton/app/console/commands"
+    "mix-skeleton/console/commands"
 )
 
 var (
@@ -13,19 +13,19 @@ var (
 func init() {
     Commands = append(Commands,
         console.CommandDefinition{
-            Name:  "foo",
-            Usage: "foo desc",
+            Name:  "hello",
+            Usage: "Echo demo",
             Options: []console.OptionDefinition{
                 {
                     Names: []string{"n", "name"},
                     Usage: "your name",
                 },
+                {
+                    Names: []string{"say"},
+                    Usage: "Say ...",
+                },
             },
-            Reflect: bean.NewReflect(commands.FooCommand{}),
-        }, console.CommandDefinition{
-            Name:    "bar",
-            Usage:   "bar desc",
-            Reflect: bean.NewReflect(commands.BarCommand{}),
+            Reflect: bean.NewReflect(commands.HelloCommand{}),
         },
     )
 }
