@@ -5,10 +5,6 @@ import (
     "github.com/mix-go/console"
 )
 
-var (
-    Beans []bean.BeanDefinition
-)
-
 func init() {
     Beans = append(Beans,
         bean.BeanDefinition{
