@@ -1,6 +1,7 @@
 package listeners
 
 import (
+    "console/globals"
     event2 "github.com/mix-go/console/event"
     "github.com/mix-go/console/flag"
     "github.com/mix-go/console/process"
@@ -19,6 +20,10 @@ func (t *CommandListener) Events() []event.Event {
 func (t *CommandListener) Process(e event.Event) {
     switch e.(type) {
     case *event2.CommandBeforeExecuteEvent:
+        // 初始化全局对象
+        globals.Init()
+
+        // 设置守护
         if flag.BoolMatch([]string{"d", "daemon"}, false) {
             process.Daemon()
         }
