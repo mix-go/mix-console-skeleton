@@ -1,9 +1,10 @@
 package manifest
 
 import (
-    "github.com/mix-go/console"
     "console/manifest/beans"
     "console/manifest/commands"
+    "github.com/mix-go/console"
+    "github.com/mix-go/dotenv"
 )
 
 var (
@@ -13,8 +14,8 @@ var (
 func init() {
     ApplicationDefinition = console.ApplicationDefinition{
         AppName:    "app",
-        AppVersion: "1.0.0",
-        AppDebug:   true,
+        AppVersion: "1.0.0-alpha",
+        AppDebug:   dotenv.Getenv("APP_DEBUG").Bool(),
         Beans:      beans.Beans,
         Commands:   commands.Commands,
     }

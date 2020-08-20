@@ -10,7 +10,7 @@ import (
 
 func Init() {
     // 日志配置
-    logger := GetLogger()
+    logger := Logger()
     file := logrus.NewFileWriter(fmt.Sprintf("%s/../runtime/logs/test.log", console.App().BasePath), 7)
     writer := io.MultiWriter(os.Stdout, file)
     logger.SetOutput(writer)

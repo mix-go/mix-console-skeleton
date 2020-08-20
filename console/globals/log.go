@@ -5,6 +5,6 @@ import (
     "github.com/mix-go/logrus"
 )
 
-func GetLogger() *logrus.Logger {
+func Logger() *logrus.Logger {
     return console.Context().Get("logger").(*logrus.Logger)
 }

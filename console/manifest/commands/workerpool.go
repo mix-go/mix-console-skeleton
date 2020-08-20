@@ -9,15 +9,20 @@ import (
 func init() {
     Commands = append(Commands,
         console.CommandDefinition{
-            Name:  "wp",
-            Usage: "\tWorker pool demo",
+            Name:    "wp",
+            Usage:   "\tWorker pool demo",
+            Reflect: bean.NewReflect(commands.WorkerPoolCommand{}),
+        },
+        console.CommandDefinition{
+            Name:  "wpd",
+            Usage: "\tWorker pool daemon demo",
             Options: []console.OptionDefinition{
                 {
                     Names: []string{"d", "daemon"},
                     Usage: "Run in the background",
                 },
             },
-            Reflect: bean.NewReflect(commands.HelloCommand{}),
+            Reflect: bean.NewReflect(commands.WorkerPoolDaemonCommand{}),
         },
     )
 }
