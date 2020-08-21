@@ -12,11 +12,11 @@ import (
 
 func init() {
     // Env
-    if err := dotenv.Load(fmt.Sprintf("%s/../.env", argv.Program.Dir)); err != nil {
+    if err := dotenv.Load(fmt.Sprintf("%s/../.env", argv.Program().Dir)); err != nil {
         panic(err)
     }
-    // Conf
-    if err := configor.Load(&globals.Config, fmt.Sprintf("%s/../conf/config.json", argv.Program.Dir)); err != nil {
+    // Conf support YAML, JSON, TOML, Shell Environment
+    if err := configor.Load(&globals.Config, fmt.Sprintf("%s/../conf/config.json", argv.Program().Dir)); err != nil {
         panic(err)
     }
     // manifest
