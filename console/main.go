@@ -19,7 +19,7 @@ func init() {
     if err := configor.Load(&globals.Config, fmt.Sprintf("%s/../conf/config.json", argv.Program().Dir)); err != nil {
         panic(err)
     }
-    // manifest
+    // Manifest
     manifest.Init()
 }
 
