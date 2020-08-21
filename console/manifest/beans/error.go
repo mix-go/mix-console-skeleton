@@ -5,7 +5,7 @@ import (
     "github.com/mix-go/console"
 )
 
-func init() {
+func errorInit() {
     Beans = append(Beans,
         bean.BeanDefinition{
             Name:            "error",

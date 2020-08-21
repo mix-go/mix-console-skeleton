@@ -6,7 +6,7 @@ import (
     "console/listeners"
 )
 
-func init() {
+func eventInit() {
     Beans = append(Beans,
         bean.BeanDefinition{
             Name:            "eventDispatcher",

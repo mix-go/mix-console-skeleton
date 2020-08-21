@@ -11,7 +11,9 @@ var (
     ApplicationDefinition console.ApplicationDefinition
 )
 
-func init() {
+func Init() {
+    beans.Init()
+
     ApplicationDefinition = console.ApplicationDefinition{
         AppName:    "app",
         AppVersion: "1.0.0-alpha",

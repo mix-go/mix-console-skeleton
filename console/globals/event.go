@@ -5,6 +5,6 @@ import (
     "github.com/mix-go/event"
 )
 
-func GetEventDispatcher() *event.Dispatcher {
+func EventDispatcher() *event.Dispatcher {
     return console.Context().Get("eventDispatcher").(*event.Dispatcher)
 }

@@ -13,10 +13,14 @@ replace (
 
 require (
 	github.com/go-redis/redis/v8 v8.0.0-beta.7
+	github.com/jinzhu/configor v1.2.0 // indirect
+	github.com/jinzhu/gorm v1.9.16
 	github.com/mix-go/bean v1.0.0-beta5
 	github.com/mix-go/console v1.0.0-beta8
 	github.com/mix-go/dotenv v0.0.0-00010101000000-000000000000
 	github.com/mix-go/event v1.0.0-beta5
 	github.com/mix-go/logrus v1.0.0-beta5
 	github.com/mix-go/workerpool v1.0.0-beta9
+	gopkg.in/yaml.v2 v2.3.0 // indirect
+	gorm.io/gorm v0.2.34 // indirect
 )
