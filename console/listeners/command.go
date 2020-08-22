@@ -24,7 +24,7 @@ func (t *CommandListener) Process(e event.Event) {
         globals.Init()
 
         // 设置守护
-        if flag.BoolMatch([]string{"d", "daemon"}, false) {
+        if flag.Match("d", "daemon").Bool() {
             process.Daemon()
         }
         break

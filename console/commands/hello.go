@@ -9,7 +9,7 @@ type HelloCommand struct {
 }
 
 func (t *HelloCommand) Main() {
-    name := flag.StringMatch([]string{"n", "name"}, "Xiao Ming")
-    say := flag.StringMatch([]string{"say"}, "Hello, World!")
+    name := flag.Match("n", "name").String("Xiao Ming")
+    say := flag.Match("say").String("Hello, World!")
     fmt.Printf("%s: %s\n", name, say)
 }
