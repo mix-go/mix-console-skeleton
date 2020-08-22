@@ -1,7 +1,7 @@
 package listeners
 
 import (
-    "console/globals"
+    "github.com/mix-go/mix-skeleton/console/globals"
     event2 "github.com/mix-go/console/event"
     "github.com/mix-go/console/flag"
     "github.com/mix-go/console/process"

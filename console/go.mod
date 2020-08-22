@@ -1,4 +1,4 @@
-module console
+module github.com/mix-go/mix-skeleton/console
 
 go 1.13
 
@@ -16,7 +16,7 @@ require (
 	github.com/jinzhu/configor v1.2.0 // indirect
 	github.com/jinzhu/gorm v1.9.16
 	github.com/mix-go/bean v1.0.0-beta5
-	github.com/mix-go/console v1.0.0-beta8
+	github.com/mix-go/console v0.0.0-00010101000000-000000000000
 	github.com/mix-go/dotenv v0.0.0-00010101000000-000000000000
 	github.com/mix-go/event v1.0.0-beta5
 	github.com/mix-go/logrus v1.0.0-beta5
