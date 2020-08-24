@@ -6,7 +6,7 @@ import (
     "github.com/mix-go/mix-skeleton/console/listeners"
 )
 
-func eventInit() {
+func Event() {
     Beans = append(Beans,
         bean.BeanDefinition{
             Name:            "eventDispatcher",

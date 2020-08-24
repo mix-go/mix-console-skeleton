@@ -6,7 +6,7 @@ import (
     "github.com/mix-go/dotenv"
 )
 
-func redisInit() {
+func Redis() {
     Beans = append(Beans,
         bean.BeanDefinition{
             Name:            "redis",

@@ -7,7 +7,7 @@ import (
     "github.com/mix-go/dotenv"
 )
 
-func dbInit() {
+func DB() {
     Beans = append(Beans,
         bean.BeanDefinition{
             Name:            "db",
