@@ -1,7 +1,7 @@
 package commands
 
 import (
-    "github.com/mix-go/mix-skeleton/console/globals"
+    "github.com/mix-go/mix-console-skeleton/globals"
     "context"
     "fmt"
     "github.com/mix-go/workerpool"

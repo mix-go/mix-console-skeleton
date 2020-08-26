@@ -2,8 +2,8 @@ package commands
 
 import (
     "fmt"
-    "github.com/mix-go/mix-skeleton/console/globals"
-    "github.com/mix-go/mix-skeleton/console/models"
+    "github.com/mix-go/mix-console-skeleton/globals"
+    "github.com/mix-go/mix-console-skeleton/models"
 )
 
 type DBCommand struct {

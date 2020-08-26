@@ -1,8 +1,8 @@
 package main
 
 import (
-    "github.com/mix-go/mix-skeleton/console/globals"
-    "github.com/mix-go/mix-skeleton/console/manifest"
+    "github.com/mix-go/mix-console-skeleton/globals"
+    "github.com/mix-go/mix-console-skeleton/manifest"
     "fmt"
     "github.com/jinzhu/configor"
     console2 "github.com/mix-go/console"

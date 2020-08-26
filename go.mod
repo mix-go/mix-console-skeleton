@@ -3,12 +3,12 @@ module github.com/mix-go/mix-console-skeleton
 go 1.13
 
 replace (
-	github.com/mix-go/bean => ../../mix/src/bean
-	github.com/mix-go/console => ../../mix/src/console
-	github.com/mix-go/dotenv => ../../mix/src/dotenv
-	github.com/mix-go/event => ../../mix/src/event
-	github.com/mix-go/logrus => ../../mix/src/logrus
-	github.com/mix-go/workerpool => ../../mix/src/workerpool
+	github.com/mix-go/bean => ../mix/src/bean
+	github.com/mix-go/console => ../mix/src/console
+	github.com/mix-go/dotenv => ../mix/src/dotenv
+	github.com/mix-go/event => ../mix/src/event
+	github.com/mix-go/logrus => ../mix/src/logrus
+	github.com/mix-go/workerpool => ../mix/src/workerpool
 )
 
 require (
