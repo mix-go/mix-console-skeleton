@@ -5,7 +5,9 @@
 - 安装开发工具
 
 ~~~
-go get github.com/mix-go/mix
+git clone https://github.com/mix-go/mix
+cd mix
+go install
 ~~~
 
 - 创建应用骨架
