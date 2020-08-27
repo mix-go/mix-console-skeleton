@@ -2,7 +2,7 @@ package listeners
 
 import (
     "github.com/mix-go/mix-console-skeleton/globals"
-    event2 "github.com/mix-go/console/event"
+    "github.com/mix-go/console"
     "github.com/mix-go/console/flag"
     "github.com/mix-go/console/process"
     "github.com/mix-go/event"
@@ -13,13 +13,13 @@ type CommandListener struct {
 
 func (t *CommandListener) Events() []event.Event {
     return []event.Event{
-        &event2.CommandBeforeExecuteEvent{},
+        &console.CommandBeforeExecuteEvent{},
     }
 }
 
 func (t *CommandListener) Process(e event.Event) {
     switch e.(type) {
-    case *event2.CommandBeforeExecuteEvent:
+    case *console.CommandBeforeExecuteEvent:
         // 初始化全局对象
         globals.Init()
 

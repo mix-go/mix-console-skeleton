@@ -1,9 +1,8 @@
 package commands
 
 import (
-    "github.com/mix-go/mix-console-skeleton/commands"
-    "github.com/mix-go/bean"
     "github.com/mix-go/console"
+    "github.com/mix-go/mix-console-skeleton/commands"
 )
 
 func init() {
@@ -11,7 +10,7 @@ func init() {
         console.CommandDefinition{
             Name:    "wp",
             Usage:   "\tWorker pool demo",
-            Reflect: bean.NewReflect(commands.WorkerPoolCommand{}),
+            Command: &commands.WorkerPoolCommand{},
         },
         console.CommandDefinition{
             Name:  "wpd",
@@ -22,7 +21,7 @@ func init() {
                     Usage: "Run in the background",
                 },
             },
-            Reflect: bean.NewReflect(commands.WorkerPoolDaemonCommand{}),
+            Command: &commands.WorkerPoolDaemonCommand{},
         },
     )
 }

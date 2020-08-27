@@ -2,7 +2,6 @@ package commands
 
 import (
     "github.com/mix-go/mix-console-skeleton/commands"
-    "github.com/mix-go/bean"
     "github.com/mix-go/console"
 )
 
@@ -11,7 +10,7 @@ func init() {
         console.CommandDefinition{
             Name:  "db",
             Usage: "\tDatabase query demo",
-            Reflect: bean.NewReflect(commands.DBCommand{}),
+            Command: &commands.DBCommand{},
         },
     )
 }
