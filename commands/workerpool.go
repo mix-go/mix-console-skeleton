@@ -39,7 +39,6 @@ func (t *WorkerPoolCommand) Main() {
     }()
 
     d.Run()
-    d.Wait()
 }
 
 type WorkerPoolDaemonCommand struct {
@@ -74,5 +73,4 @@ func (t *WorkerPoolDaemonCommand) Main() {
     }()
 
     d.Run()
-    d.Wait()
 }
