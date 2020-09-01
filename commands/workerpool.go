@@ -1,9 +1,10 @@
 package commands
 
 import (
-    "github.com/mix-go/mix-console-skeleton/globals"
     "context"
     "fmt"
+    "github.com/mix-go/console/catch"
+    "github.com/mix-go/mix-console-skeleton/globals"
     "github.com/mix-go/workerpool"
     "os"
     "os/signal"
@@ -16,8 +17,12 @@ type worker struct {
     workerpool.WorkerTrait
 }
 
-func (t *worker) Handle(data interface{}) {
+func (t *worker) Do(data interface{}) {
     fmt.Println(data)
+}
+
+func (t *worker) Error(err interface{}) {
+    catch.Error(err) // 捕获错误
 }
 
 func NewWorker() workerpool.Worker {
