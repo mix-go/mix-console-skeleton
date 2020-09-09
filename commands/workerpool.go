@@ -34,7 +34,7 @@ type WorkerPoolCommand struct {
 
 func (t *WorkerPoolCommand) Main() {
     jobQueue := make(chan interface{}, 50)
-    d := workerpool.NewDispatcher(NewWorker, 15, jobQueue)
+    d := workerpool.NewDispatcher(jobQueue, 15, NewWorker)
 
     go func() {
         for i := 0; i < 10000; i++ {
@@ -52,7 +52,7 @@ type WorkerPoolDaemonCommand struct {
 func (t *WorkerPoolDaemonCommand) Main() {
     redis := globals.Redis()
     jobQueue := make(chan interface{}, 50)
-    d := workerpool.NewDispatcher(NewWorker, 15, jobQueue)
+    d := workerpool.NewDispatcher(jobQueue, 15, NewWorker)
 
     ch := make(chan os.Signal)
     signal.Notify(ch, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM)
