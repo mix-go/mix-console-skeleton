@@ -15,12 +15,12 @@ require (
 	github.com/go-redis/redis/v8 v8.0.0-beta.7
 	github.com/jinzhu/configor v1.2.0 // indirect
 	github.com/jinzhu/gorm v1.9.16
-	github.com/mix-go/bean v1.0.8
-	github.com/mix-go/console v1.0.15
-	github.com/mix-go/dotenv v1.0.1
-	github.com/mix-go/event v1.0.15
-	github.com/mix-go/logrus v1.0.15
-	github.com/mix-go/workerpool v1.0.15
+	github.com/mix-go/bean v1.0.16
+	github.com/mix-go/console v1.0.16
+	github.com/mix-go/dotenv v1.0.16
+	github.com/mix-go/event v1.0.16
+	github.com/mix-go/logrus v1.0.16
+	github.com/mix-go/workerpool v1.0.16
 	github.com/sirupsen/logrus v1.6.0
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 	gorm.io/gorm v0.2.34 // indirect
