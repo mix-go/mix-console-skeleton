@@ -18,11 +18,13 @@ type worker struct {
 }
 
 func (t *worker) Do(data interface{}) {
-    fmt.Println(data)
-}
+    defer func() {
+        if err := recover(); err != nil {
+            catch.Error(err)
+        }
+    }()
 
-func (t *worker) Error(err interface{}) {
-    catch.Error(err) // 捕获错误
+    fmt.Println(data)
 }
 
 func NewWorker() workerpool.Worker {
